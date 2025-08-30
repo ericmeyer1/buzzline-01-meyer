@@ -57,20 +57,13 @@ STATUS: list = ["OK", "Warning", "Error"]
 
 def generate_messages():
     """
-    Generate a stream of buzz messages.
-
-    This function uses a generator, which yields one buzz at a time.
-    Generators are memory-efficient because they produce items on the fly
-    rather than creating a full list in memory.
-
-    Because this function uses a while True loop, it will run continuously 
-    until we close the window or hit CTRL c (CMD c on Mac/Linux).
+    Generate a stream of manufacturing log messages.
     """
     while True:
-        adjective = random.choice(ADJECTIVES)
+        machine = random.choice(MACHINES)
         action = random.choice(ACTIONS)
-        topic = random.choice(TOPICS)
-        yield f"I just {action} {topic}! It was {adjective}."
+        status = random.choice(STATUS)
+        yield f"[{machine}] {action} | Status: {status}"
 
 
 #####################################
