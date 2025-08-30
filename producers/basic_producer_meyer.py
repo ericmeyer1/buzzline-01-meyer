@@ -34,23 +34,10 @@ load_dotenv()
 def get_message_interval() -> int:
     """
     Fetch message interval from environment or use a default value.
-
-    It doesn't need any outside information, so the parentheses are empty.
-    It returns an integer, so we specify that in the function signature.
-
-    The colon at the end of the function signature is required.
-    All statements inside the function must be consistently indented.
-
-    Define a local variable to hold the value of the environment variable
-    os.getenv() is a function that fetches the value of an environment variable
-    os.getenv() always returns a string 
-    We convert the return value to an integer using the built-in Python int() function
-    To use handy functions like this, import the os module 
-    from the Python Standard Library (see above).
     """
     return_value: str = os.getenv("MESSAGE_INTERVAL_SECONDS", 3)
     interval: int = int(return_value)
-    logger.info(f"Messages will be sent every {interval} seconds.")
+    logger.info(f"Messages will be logged every {interval} seconds.")
     return interval
 
 
