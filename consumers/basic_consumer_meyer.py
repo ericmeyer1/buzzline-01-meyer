@@ -22,7 +22,7 @@ from utils.utils_logger import logger, get_log_file_path
 
 def process_message(log_file) -> None:
     """
-    Read a log file and process each message.
+    Continuously read a log file and process each message.
 
     Args:
         log_file (str): The path to the log file to read.
@@ -30,31 +30,32 @@ def process_message(log_file) -> None:
     with open(log_file, "r") as file:
         # Move to the end of the file
         file.seek(0, os.SEEK_END)
-        print("Consumer is ready and waiting for a new log message...")
+        print("Consumer is ready and waiting for new manufacturing log messages...")
 
-        # Use while True loop so the consumer keeps running forever
         while True:
-
-            # Read the next line of the file
             line = file.readline()
 
-            # If the line is empty, wait for a new log entry
             if not line:
-                # Wait a second for a new log entry
-                delay_seconds = 1
-                time.sleep(delay_seconds)
-                # Keep checking for new log entries
+                # No new line yet, wait a bit
+                time.sleep(1)
                 continue
 
-            # We got a new log entry!
-            # Remove any leading/trailing white space and log the message
+            # Process new log entry
             message = line.strip()
             print(f"Consumed log message: {message}")
 
-            # monitor and alert on special conditions
-            if "I just loved a movie! It was funny." in message:
-                print(f"ALERT: The special message was found! \n{message}")
-                logger.warning(f"ALERT: The special message was found! \n{message}")
+            # Check for special conditions
+            if "Status: Error" in message:
+                print(f"🚨 ALERT: Machine error detected!\n{message}")
+                logger.error(f"🚨 ALERT: Machine error detected!\n{message}")
+
+            elif "Status: Warning" in message:
+                print(f"⚠️ WARNING: Machine warning logged.\n{message}")
+                logger.warning(f"⚠️ WARNING: Machine warning logged.\n{message}")
+
+            elif "completed job" in message:
+                print(f"✅ INFO: A machine completed a job.\n{message}")
+                logger.info(f"✅ INFO: A machine completed a job.\n{message}")
 
 
 #####################################
