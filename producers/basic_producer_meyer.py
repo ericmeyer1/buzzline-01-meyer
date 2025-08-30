@@ -73,27 +73,15 @@ def generate_messages():
 
 def main() -> None:
     """
-    Main entry point for this producer.
-
-    It doesn't need any outside information, so the parentheses are empty.
-    It doesn't return anything, so we say the return type is None.   
-    The colon at the end of the function signature is required.
-    All statements inside the function must be consistently indented. 
-    This is a multiline docstring - a special type of comment 
-    that explains what the function does.
+    Main entry point for manufacturing log producer.
     """
-
-    logger.info("START producer...")
+    logger.info("START Manufacturing Log Producer...")
     logger.info("Hit CTRL c (or CMD c) to close.")
-    
-    # Call the function we defined above to get the message interval
-    # Assign the return value to a variable called interval_secs
+
     interval_secs: int = get_message_interval()
 
     for message in generate_messages():
         logger.info(message)
-        # Use the time module to pause execution for a specified number of seconds
-        # The time.sleep() function takes a single argument: the number of seconds to pause
         time.sleep(interval_secs)
 
     logger.info("NOTE: See the `logs` folder to learn more.")
