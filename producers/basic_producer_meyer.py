@@ -1,7 +1,7 @@
 """
-basic_generator_case.py
+basic_generator_meyer.py
 
-Generate some streaming buzz messages. 
+Custome producer generating simple manufactured log messages.
 """
 
 #####################################
