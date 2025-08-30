@@ -45,10 +45,10 @@ def get_message_interval() -> int:
 # Define global variables
 #####################################
 
-# Define some lists for generating buzz messages
-ADJECTIVES: list = ["amazing", "funny", "boring", "exciting", "weird"]
-ACTIONS: list = ["found", "saw", "tried", "shared", "loved"]
-TOPICS: list = ["a movie", "a meme", "an app", "a trick", "a story"]
+# Define some lists for generating manufacturing messages
+MACHINES: list = ["Press-101", "CNC-204", "Lathe-330", "Welder-112", "Robot-7"]
+ACTIONS: list = ["started job", "completed job", "stopped for maintenance", "resumed operation", "waiting for material"]
+STATUS: list = ["OK", "Warning", "Error"]
 
 #####################################
 # Define a function to generate buzz messages
