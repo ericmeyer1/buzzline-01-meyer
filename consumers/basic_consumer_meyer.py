@@ -1,7 +1,7 @@
 """
-basic_consumer_case.py
+basic_consumer_eric.py
 
-Read a log file as it is being written. 
+Consume a manufacturing log file in real time and alert on specific conditions.
 """
 
 #####################################
