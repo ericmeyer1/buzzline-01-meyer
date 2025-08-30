@@ -80,3 +80,6 @@
 2025-08-29 20:20:10.400 | INFO     | __main__:main:84 - [Lathe-330] resumed operation | Status: Error
 2025-08-29 20:20:13.402 | INFO     | __main__:main:84 - [Lathe-330] waiting for material | Status: Warning
 2025-08-29 20:20:16.403 | INFO     | __main__:main:84 - [Welder-112] resumed operation | Status: Warning
+2025-08-29 20:24:55.082 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-08-29 20:24:55.083 | INFO     | __main__:main:69 - START consumer...
+2025-08-29 20:24:55.083 | INFO     | __main__:main:72 - Reading file located at logs\project_log.log.
