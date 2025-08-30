@@ -1,11 +1,13 @@
-# buzzline-01-case
+# buzzline-01-meyer
 
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
 
-This project introduces streaming data. 
-The Python language includes generators - we'll use this feature to generate some streaming buzzline messages. 
-As the code runs, it will continuously update the log file. 
-We'll use a consumer to monitor the log file and alert us when a special message is detected. 
+This project introduces streaming data.  
+The Python language includes generators - we'll use this feature to generate some streaming **manufacturing log messages**.  
+As the code runs, it will continuously update the log file.  
+We'll use a consumer to monitor the log file and **alert us when errors or warnings are detected**.  
+
+---
 
 ## Task 1. Set Up Your Machine & Sign up for GitHub
 
@@ -28,56 +30,34 @@ Name it **buzzline-01-yourname** (replace `yourname` with something unique to yo
 Follow instructions at [pro-analytics-01](https://github.com/denisecase/pro-analytics-01), **Part 2: Initialize a Project**.
 This will get your project stored safely in the cloud - and ready for work on your machine. 
 
-## Task 3. Generate Streaming Data (Terminal 1)
+## Personalization of the Producer. Generate Streaming Data with Custom Producer (Terminal 1)
 
-Now we'll generate some streaming data. 
-By the way - you've done 90% of the hard work before we even look at code. 
-Congratulations!
+We created a custom producer that mimics **manufacturing logs**.  
+It randomly simulates machine starts, stops, completions, and status alerts (OK, Warning, or Error).  
 
-In VS Code, open a terminal.
-Use the commands below to activate .venv, and run the generator as a module. 
-To learn more about why we run our Python file as a module, see [PYTHON-PKG-IMPORTS](docs/PYTHON-PKG-IMPORTS.md) 
+In VS Code, open a terminal.  
+Use the commands below to activate `.venv`, and run the generator as a module.  
 
 Windows PowerShell:
 
+```shell```
+.venv\Scripts\activate
+py -m producers.basic_producer_meyer
+
+## Personalization of the Consumer – Monitor Streaming Manufacturing Logs (Terminal 2)
+
+We created a custom consumer that reads **manufacturing log messages** in real time.  
+It monitors machine events and raises alerts for important statuses:  
+
+- ✅ Completed job  
+- ⚠️ Warning  
+- 🚨 Error  
+
+The consumer prints structured log entries to the terminal and can be used to simulate a **real-time factory dashboard**.
+
+### Running the Consumer
+
+**Windows PowerShell:**
 ```shell
 .venv\Scripts\activate
-py -m producers.basic_producer_case
-```
-
-Mac/Linux:
-```zsh
-source .venv/bin/activate
-python3 -m producers.basic_producer_case
-```
-
-## Task 4. Monitor an Active Log File (Terminal 2)
-
-A common streaming task is monitoring a log file as it is being written. 
-This project has a consumer that reads and processes our own log file as log messages arrive. 
-
-In VS Code, open a NEW terminal in your root project folder. 
-Use the commands below to activate .venv, and run the file as a module. 
-
-Windows:
-```shell
-.venv\Scripts\activate
-py -m consumers.basic_consumer_case
-```
-
-Mac/Linux:
-```zsh
-source .venv/bin/activate
-python3 -m consumers.basic_consumer_case
-```
-
-## Save Space
-To save disk space, you can delete the .venv folder when not actively working on this project.
-We can always recreate it, activate it, and reinstall the necessary packages later. 
-Managing Python virtual environments is a necessary and valuable skill. 
-We will get a good amount of practice. 
-
-## License
-This project is licensed under the MIT License as an example project. 
-You are encouraged to fork, copy, explore, and modify the code as you like. 
-See the [LICENSE](LICENSE.txt) file for more.
+py -m consumers.basic_consumer_meyer
