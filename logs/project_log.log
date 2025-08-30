@@ -51,3 +51,32 @@
 2025-08-27 20:33:02.886 | INFO     | __main__:main:68 - START...
 2025-08-27 20:33:02.886 | INFO     | __main__:main:74 - Reading file located at logs\project_log.log.
 2025-08-27 20:33:38.769 | INFO     | __main__:main:85 - END.....
+2025-08-29 20:18:36.124 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-08-29 20:18:36.134 | INFO     | __main__:main:106 - START producer...
+2025-08-29 20:18:36.134 | INFO     | __main__:main:107 - Hit CTRL c (or CMD c) to close.
+2025-08-29 20:18:36.134 | INFO     | __main__:get_message_interval:53 - Messages will be sent every 3 seconds.
+2025-08-29 20:18:36.135 | INFO     | __main__:main:114 - I just saw a movie! It was weird.
+2025-08-29 20:18:39.136 | INFO     | __main__:main:114 - I just shared an app! It was amazing.
+2025-08-29 20:18:42.139 | INFO     | __main__:main:114 - I just loved a trick! It was funny.
+2025-08-29 20:18:45.141 | INFO     | __main__:main:114 - I just shared a meme! It was amazing.
+2025-08-29 20:18:48.147 | INFO     | __main__:main:114 - I just shared a movie! It was boring.
+2025-08-29 20:19:31.371 | INFO     | utils.utils_logger:<module>:38 - Logging to file: logs\project_log.log
+2025-08-29 20:19:31.373 | INFO     | __main__:main:78 - START Manufacturing Log Producer...
+2025-08-29 20:19:31.374 | INFO     | __main__:main:79 - Hit CTRL c (or CMD c) to close.
+2025-08-29 20:19:31.374 | INFO     | __main__:get_message_interval:40 - Messages will be logged every 3 seconds.
+2025-08-29 20:19:31.374 | INFO     | __main__:main:84 - [CNC-204] completed job | Status: Error
+2025-08-29 20:19:34.376 | INFO     | __main__:main:84 - [Press-101] waiting for material | Status: Error
+2025-08-29 20:19:37.377 | INFO     | __main__:main:84 - [Press-101] completed job | Status: OK
+2025-08-29 20:19:40.379 | INFO     | __main__:main:84 - [CNC-204] completed job | Status: Error
+2025-08-29 20:19:43.381 | INFO     | __main__:main:84 - [Robot-7] started job | Status: OK
+2025-08-29 20:19:46.383 | INFO     | __main__:main:84 - [Press-101] completed job | Status: Warning
+2025-08-29 20:19:49.384 | INFO     | __main__:main:84 - [Press-101] stopped for maintenance | Status: Warning
+2025-08-29 20:19:52.387 | INFO     | __main__:main:84 - [Welder-112] completed job | Status: Warning
+2025-08-29 20:19:55.388 | INFO     | __main__:main:84 - [Press-101] resumed operation | Status: OK
+2025-08-29 20:19:58.391 | INFO     | __main__:main:84 - [CNC-204] waiting for material | Status: Error
+2025-08-29 20:20:01.392 | INFO     | __main__:main:84 - [Welder-112] waiting for material | Status: Error
+2025-08-29 20:20:04.395 | INFO     | __main__:main:84 - [Welder-112] resumed operation | Status: OK
+2025-08-29 20:20:07.397 | INFO     | __main__:main:84 - [Press-101] started job | Status: Warning
+2025-08-29 20:20:10.400 | INFO     | __main__:main:84 - [Lathe-330] resumed operation | Status: Error
+2025-08-29 20:20:13.402 | INFO     | __main__:main:84 - [Lathe-330] waiting for material | Status: Warning
+2025-08-29 20:20:16.403 | INFO     | __main__:main:84 - [Welder-112] resumed operation | Status: Warning
